@@ -1,7 +1,7 @@
 import { Route, Switch, Redirect } from "wouter";
 import TemplatesSelectionPage from "./pages/TemplatesSelectionPage";
 import TemplateBuilderPage from "./pages/TemplateBuilderPage";
-import { PagePath } from "./config/path";
+import { PagePath } from "./config";
 
 const App = () => (
   <Switch>

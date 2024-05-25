@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { PagePath } from "../../config/path";
+import { PagePath } from "../../config";
 import "./appBar.css";
 
 export const AppBar = ({ accessories }) => {

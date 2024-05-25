@@ -1,0 +1,8 @@
+{
+  "id": "template_triple_product_list",
+  "name": "Triple Product List",
+  "description": "A template for display three products in a row",
+  "thumbnail": "template_triple_product_list.png",
+  "rootId": "root",
+  "elements": {}
+}

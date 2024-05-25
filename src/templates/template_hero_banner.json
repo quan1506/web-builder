@@ -1,0 +1,51 @@
+{
+  "id": "template_hero_banner",
+  "name": "Hero Banner",
+  "description": "A template for a simple hero banner",
+  "thumbnail": "template_hero_banner.png",
+  "rootId": "root",
+  "elements": {
+    "root": {
+      "tag": "div",
+      "style": {
+        "width": 960,
+        "background-color": "#ffffff",
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center"
+      },
+      "attributes": {
+        "data-test-id": "root-container"
+      },
+      "children": ["element-1", "element-2", "element-3"]
+    },
+    "element-1": {
+      "tag": "img",
+      "style": {
+        "width": 600,
+        "margin-bottom": 40
+      },
+      "parentId": "root"
+    },
+    "element-2": {
+      "tag": "h1",
+      "style": {
+        "font-size": 40,
+        "font-weight": 600,
+        "color": "#272727",
+        "margin-bottom": 16
+      },
+      "value": "Lorem ipsum dolor sit amet",
+      "parentId": "root"
+    },
+    "element-3": {
+      "tag": "p",
+      "style": {
+        "font-size": 18,
+        "color": "#646464"
+      },
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id.",
+      "parentId": "root"
+    }
+  }
+}
