@@ -1,0 +1,21 @@
+.template-selection-page-container {
+  max-width: 1200px;
+  margin: 140px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-10);
+}
+
+.template-list-title {
+  text-align: center;
+}
+
+.template-list-container {
+  padding: 0 var(--spacing-5);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-6);
+}

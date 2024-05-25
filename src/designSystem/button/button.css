@@ -1,0 +1,30 @@
+.FDButton {
+  min-width: 60px;
+  height: 44px;
+  padding: 0 var(--spacing-6);
+
+  font-size: var(--fontSizes-4);
+  font-weight: var(--fontWeights-medium);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: var(--radii-1);
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.FDButton.primary {
+  background-color: var(--colors-neutral-900);
+  color: var(--colors-white);
+}
+
+.FDButton.primary:hover {
+  background-color: var(--colors-neutral-700);
+}
+
+.FDButton.loading {
+  cursor: wait;
+}

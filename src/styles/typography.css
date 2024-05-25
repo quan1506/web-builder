@@ -1,0 +1,39 @@
+* {
+  font-size: var(--fontSizes-3);
+  color: var(--colors-neutral-900);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fontWeights-semibold);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fontSizes-9);
+}
+
+h2 {
+  font-size: var(--fontSizes-6);
+}
+
+h3 {
+  font-size: var(--fontSizes-5);
+  font-weight: normal;
+}
+
+h4 {
+  font-size: var(--fontSizes-4);
+}
+
+h5 {
+  font-size: var(--fontSizes-3);
+}
+
+h6 {
+  font-size: var(--fontSizes-2);
+}

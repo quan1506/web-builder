@@ -1,0 +1,17 @@
+.template-builder-page-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 80px); /* 80px is the height of the app bar */
+}
+
+.template-builder-page-container .left-panel {
+  padding: var(--spacing-3);
+  flex-grow: 1;
+}
+
+.template-builder-page-container .right-panel {
+  padding-top: var(--spacing-3);
+  width: 400px;
+  height: 100%;
+  box-shadow: 0px 2px 12px 0px rgba(43, 43, 43, 0.12);
+}

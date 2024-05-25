@@ -1,0 +1,81 @@
+:root {
+  --colors-black: rgb(11, 11, 11);
+  --colors-white: rgb(255, 255, 255);
+
+  --colors-neutral-100: rgb(233, 233, 233);
+  --colors-neutral-200: rgb(211, 211, 211);
+  --colors-neutral-300: rgb(187, 187, 187);
+  --colors-neutral-400: rgb(158, 158, 158);
+  --colors-neutral-500: rgb(125, 125, 125);
+  --colors-neutral-600: rgb(100, 100, 100);
+  --colors-neutral-700: rgb(63, 63, 63);
+  --colors-neutral-800: rgb(39, 39, 39);
+  --colors-neutral-900: rgb(21, 21, 21);
+
+  --colors-success-100: rgb(223, 253, 239);
+  --colors-success-200: rgb(165, 241, 206);
+  --colors-success-300: rgb(116, 227, 176);
+  --colors-success-400: rgb(77, 212, 149);
+  --colors-success-500: rgb(24, 199, 117);
+  --colors-success-600: rgb(11, 159, 90);
+  --colors-success-700: rgb(7, 124, 69);
+  --colors-success-800: rgb(8, 100, 58);
+  --colors-success-900: rgb(3, 84, 46);
+
+  --colors-warning-100: rgb(255, 248, 220);
+  --colors-warning-200: rgb(255, 236, 179);
+  --colors-warning-300: rgb(255, 224, 130);
+  --colors-warning-400: rgb(255, 213, 79);
+  --colors-warning-500: rgb(255, 202, 40);
+  --colors-warning-600: rgb(255, 179, 0);
+  --colors-warning-700: rgb(255, 160, 0);
+  --colors-warning-800: rgb(255, 144, 0);
+  --colors-warning-900: rgb(255, 130, 0);
+
+  --colors-danger-100: rgb(255, 235, 238);
+  --colors-danger-200: rgb(255, 205, 210);
+  --colors-danger-300: rgb(239, 154, 154);
+  --colors-danger-400: rgb(229, 115, 115);
+  --colors-danger-500: rgb(239, 83, 80);
+  --colors-danger-600: rgb(229, 57, 53);
+  --colors-danger-700: rgb(211, 47, 47);
+  --colors-danger-800: rgb(198, 40, 40);
+  --colors-danger-900: rgb(183, 28, 28);
+
+  --fontSizes-1: 10px;
+  --fontSizes-2: 12px;
+  --fontSizes-3: 14px;
+  --fontSizes-4: 16px;
+  --fontSizes-5: 20px;
+  --fontSizes-6: 24px;
+  --fontSizes-7: 28px;
+  --fontSizes-8: 32px;
+  --fontSizes-9: 36px;
+  --fontSizes-10: 40px;
+
+  --fontWeights-regular: 400;
+  --fontWeights-medium: 500;
+  --fontWeights-semibold: 600;
+  --fontWeights-bold: 700;
+
+  --radii-0: 0;
+  --radii-1: 4px;
+  --radii-2: 8px;
+  --radii-3: 12px;
+
+  --spacing-0: 0;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-0pt5: 2px;
+  --spacing-1pt5: 6px;
+  --spacing-2pt5: 10px;
+  --spacing-3pt5: 14px;
+}

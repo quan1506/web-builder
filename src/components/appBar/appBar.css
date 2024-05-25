@@ -1,0 +1,15 @@
+.app-bar {
+  height: 80px;
+  padding: var(--spacing-3) var(--spacing-10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-6);
+  box-shadow: 0px 2px 12px 0px rgba(43, 43, 43, 0.12);
+}
+
+.branding-name-link {
+  text-decoration: none;
+  font-size: var(--fontSizes-9);
+  font-weight: var(--fontWeights-semibold);
+}
