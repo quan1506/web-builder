@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch, Redirect } from "wouter";
+import TemplatesSelectionPage from "./pages/TemplatesSelectionPage";
+import TemplateBuilderPage from "./pages/TemplateBuilderPage";
+import { PagePath } from "./config/path";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Switch>
+    <Route path={PagePath.TEMPLATES} component={TemplatesSelectionPage} />
+    <Route
+      path={`${PagePath.BUILDER}/:templateId`}
+      component={TemplateBuilderPage}
+    />
+    <Route>
+      <Redirect to={PagePath.TEMPLATES} />
+    </Route>
+  </Switch>
+);
 
 export default App;
