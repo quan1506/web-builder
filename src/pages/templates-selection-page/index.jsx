@@ -1,8 +1,8 @@
 import { useLocation } from "wouter";
 import { AppBar, TemplateCard } from "../../components";
 import { usePageBuilderStore } from "../../hooks";
-import { TEMPLATES } from "../../templates";
 import { PagePath } from "../../config";
+import { TEMPLATES } from "../../templates";
 import "./TemplatesSelectionPage.css";
 
 const TemplateSelectionPage = () => {

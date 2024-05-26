@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "wouter";
-import TemplatesSelectionPage from "./pages/TemplatesSelectionPage";
-import TemplateBuilderPage from "./pages/TemplateBuilderPage";
+import TemplatesSelectionPage from "./pages/templates-selection-page";
+import TemplateBuilderPage from "./pages/template-builder-page";
 import { PagePath } from "./config";
 
 const App = () => (

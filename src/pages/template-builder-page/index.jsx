@@ -1,8 +1,7 @@
 import { useShallow } from "zustand/react/shallow";
-import { AppBar, TemplateElementRenderer } from "../../components";
-import { Button } from "../../designSystem";
+import { AppBar, Iframe, TemplateElementRenderer } from "../../components";
+import { Button } from "../../design-system";
 import { usePageBuilderStore } from "../../hooks";
-import Iframe from "../../components/iframe";
 import "./TemplateBuilderPage.css";
 
 const TemplateBuilderPage = () => {

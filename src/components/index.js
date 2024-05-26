@@ -1,4 +1,4 @@
-export { default as AppBar } from "./appBar";
-export { default as TemplateCard } from "./templateCard";
+export { default as AppBar } from "./app-bar";
+export { default as TemplateCard } from "./template-card";
 export { default as Iframe } from "./iframe";
-export { default as TemplateElementRenderer } from "./templateElementRenderer";
+export { default as TemplateElementRenderer } from "./template-element-renderer";
