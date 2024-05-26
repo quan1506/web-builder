@@ -4,15 +4,18 @@
   "description": "A template for a simple hero banner",
   "thumbnail": "template_hero_banner.png",
   "rootId": "root",
-  "elements": {
+  "document": {
     "root": {
+      "id": "root",
       "tag": "div",
       "style": {
         "width": 960,
-        "background-color": "#ffffff",
+        "backgroundColor": "#ffffff",
         "display": "flex",
-        "justify-content": "center",
-        "align-items": "center"
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "margin": "0 auto"
       },
       "attributes": {
         "data-test-id": "root-container"
@@ -20,29 +23,33 @@
       "children": ["element-1", "element-2", "element-3"]
     },
     "element-1": {
+      "id": "element-1",
       "tag": "img",
       "style": {
         "width": 600,
-        "margin-bottom": 40
+        "height": 400
       },
       "parentId": "root"
     },
     "element-2": {
+      "id": "element-2",
       "tag": "h1",
       "style": {
-        "font-size": 40,
-        "font-weight": 600,
+        "fontSize": 40,
+        "fontWeight": 600,
         "color": "#272727",
-        "margin-bottom": 16
+        "textAlign": "center"
       },
       "value": "Lorem ipsum dolor sit amet",
       "parentId": "root"
     },
     "element-3": {
+      "id": "element-3",
       "tag": "p",
       "style": {
-        "font-size": 18,
-        "color": "#646464"
+        "fontSize": 18,
+        "color": "#646464",
+        "textAlign": "center"
       },
       "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id.",
       "parentId": "root"
