@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   height: calc(100vh - 80px); /* 80px is the height of the app bar */
+  overflow-y: hidden;
 }
 
 .template-builder-page-container .left-panel {
-  padding: var(--spacing-3);
   flex-grow: 1;
 }
 

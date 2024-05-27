@@ -5,17 +5,11 @@ import { usePageBuilderStore } from "../../hooks";
 import "./TemplateBuilderPage.css";
 
 const TemplateBuilderPage = () => {
-  const { selectedElementId, selectElement, document, rootElementId } =
-    usePageBuilderStore(
-      useShallow((state) => ({
-        selectedElementId: state.selectedElementId,
-        selectElement: state.selectElement,
-        document: state.document,
-        rootElementId: state.rootElementId,
-      }))
-    );
-
-  const rootElement = document[rootElementId];
+  const { rootElementId } = usePageBuilderStore(
+    useShallow((state) => ({
+      rootElementId: state.rootElementId,
+    }))
+  );
 
   return (
     <div>
@@ -23,17 +17,25 @@ const TemplateBuilderPage = () => {
       <main className="template-builder-page-container">
         <section className="left-panel">
           <Iframe title="template-builder">
-            <TemplateElementRenderer
-              element={rootElement}
-              document={document}
-              onClick={selectElement}
-            />
+            <TemplateElementRenderer elementId={rootElementId} />
           </Iframe>
         </section>
 
         <section className="right-panel">
           <h2>Template Settings</h2>
-          <div>Selected Element: {selectedElementId}</div>
+          <button
+            onClick={() => {
+              usePageBuilderStore.getState().updateElementStyle("element-2", {
+                attributeName: "color",
+                // Random color
+                attributeValue: `#${Math.floor(
+                  Math.random() * 16777215
+                ).toString(16)}`,
+              });
+            }}
+          >
+            Test
+          </button>
         </section>
       </main>
     </div>

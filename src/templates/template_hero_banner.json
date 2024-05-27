@@ -9,13 +9,14 @@
       "id": "root",
       "tag": "div",
       "style": {
-        "width": 960,
+        "width": 600,
+        "height": "100%",
         "backgroundColor": "#ffffff",
         "display": "flex",
         "flexDirection": "column",
-        "justifyContent": "center",
         "alignItems": "center",
-        "margin": "0 auto"
+        "margin": "0 auto",
+        "padding": "12px 24px"
       },
       "attributes": {
         "data-test-id": "root-container"
@@ -26,7 +27,7 @@
       "id": "element-1",
       "tag": "img",
       "style": {
-        "width": 600,
+        "width": 500,
         "height": 400
       },
       "parentId": "root"
