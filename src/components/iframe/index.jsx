@@ -3,30 +3,34 @@ import { createPortal } from "react-dom";
 import "./iframe.css";
 
 const Iframe = ({ children, title, ...props }) => {
-  const [iframeRef, setContentRef] = useState(null);
-  const mountNode = iframeRef?.contentWindow?.document?.body;
+  const [iframeDocument, setIframeDocument] = useState(null);
+  const iframeBody = iframeDocument?.body;
 
   useEffect(() => {
-    if (!iframeRef) {
+    if (!iframeDocument) {
       return;
     }
-    const iframeDocument =
-      iframeRef.contentDocument || iframeRef.contentWindow.document;
 
     const styleEl = document.createElement("style");
     styleEl.textContent =
-      "body { margin: 0; }, *, *::before, *::after { box-sizing: border-box; }";
+      "body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden }, *, *::before, *::after { box-sizing: border-box; }";
     iframeDocument.head.appendChild(styleEl);
-  }, [iframeRef]);
+  }, [iframeDocument]);
+
+  const handleIframeLoad = (event) => {
+    setIframeDocument(event.target?.contentDocument);
+  };
 
   return (
     <iframe
       {...props}
-      ref={setContentRef}
+      src="about:blank"
+      srcDoc="<!DOCTYPE html>"
       title={title}
+      onLoad={handleIframeLoad}
       className="iframe-container"
     >
-      {mountNode &&
+      {iframeBody &&
         createPortal(
           <div
             style={{
@@ -36,11 +40,9 @@ const Iframe = ({ children, title, ...props }) => {
               overflowY: "auto",
             }}
           >
-            <div style={{ padding: "12px 0", minHeight: "100%" }}>
-              {children}
-            </div>
+            {children}
           </div>,
-          mountNode
+          iframeBody
         )}
     </iframe>
   );

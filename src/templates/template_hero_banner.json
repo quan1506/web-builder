@@ -3,57 +3,86 @@
   "name": "Hero Banner",
   "description": "A template for a simple hero banner",
   "thumbnail": "template_hero_banner.png",
-  "rootId": "root",
+  "rootId": "page-wrapper",
   "document": {
-    "root": {
-      "id": "root",
+    "page-wrapper": {
+      "id": "page-wrapper",
+      "type": "page",
+      "isRoot": true,
       "tag": "div",
+      "isEditable": true,
       "style": {
-        "width": 600,
-        "height": "100%",
-        "backgroundColor": "#ffffff",
         "display": "flex",
-        "flexDirection": "column",
-        "alignItems": "center",
-        "margin": "0 auto",
-        "padding": "12px 24px"
+        "width": "100%",
+        "minHeight": "100%",
+        "padding": "12px 0",
+        "backgroundColor": "#f5f5f5"
       },
       "attributes": {
-        "data-test-id": "root-container"
+        "data-test-id": "page-wrapper"
+      },
+      "children": ["page-content"]
+    },
+    "page-content": {
+      "id": "page-content",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "margin": "0 auto",
+        "width": 600,
+        "backgroundColor": "#ffffff"
+      },
+      "children": ["element-list"]
+    },
+    "element-list": {
+      "id": "element-list",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "padding": "12px 24px",
+        "minHeight": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center"
       },
       "children": ["element-1", "element-2", "element-3"]
     },
     "element-1": {
       "id": "element-1",
+      "type": "image",
       "tag": "img",
+      "isEditable": true,
       "style": {
         "width": 500,
         "height": 400
-      },
-      "parentId": "root"
+      }
     },
     "element-2": {
       "id": "element-2",
+      "type": "heading",
       "tag": "h1",
+      "isEditable": true,
       "style": {
         "fontSize": 40,
         "fontWeight": 600,
         "color": "#272727",
         "textAlign": "center"
       },
-      "value": "Lorem ipsum dolor sit amet",
-      "parentId": "root"
+      "value": "Lorem ipsum dolor sit amet"
     },
     "element-3": {
       "id": "element-3",
+      "type": "paragraph",
       "tag": "p",
+      "isEditable": true,
       "style": {
         "fontSize": 18,
         "color": "#646464",
         "textAlign": "center"
       },
-      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id.",
-      "parentId": "root"
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id."
     }
   }
 }
