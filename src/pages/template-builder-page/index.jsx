@@ -1,5 +1,10 @@
 import { useShallow } from "zustand/react/shallow";
-import { AppBar, Iframe, TemplateElementRenderer } from "../../components";
+import {
+  AppBar,
+  Iframe,
+  SettingsPanel,
+  TemplateElementRenderer,
+} from "../../components";
 import { Button } from "../../design-system";
 import { usePageBuilderStore } from "../../hooks";
 import "./TemplateBuilderPage.css";
@@ -22,20 +27,7 @@ const TemplateBuilderPage = () => {
         </section>
 
         <section className="right-panel">
-          <h2>Template Settings</h2>
-          <button
-            onClick={() => {
-              usePageBuilderStore.getState().updateElementStyle("element-2", {
-                attributeName: "color",
-                // Random color
-                attributeValue: `#${Math.floor(
-                  Math.random() * 16777215
-                ).toString(16)}`,
-              });
-            }}
-          >
-            Test
-          </button>
+          <SettingsPanel />
         </section>
       </main>
     </div>

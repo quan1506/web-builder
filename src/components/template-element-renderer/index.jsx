@@ -1,35 +1,50 @@
 import { useShallow } from "zustand/react/shallow";
 import { usePageBuilderStore } from "../../hooks";
 import { VOID_HTML_ELEMENTS } from "./constants";
+import { memo } from "react";
 
 const TemplateElementRenderer = ({ elementId }) => {
   const { element, isSelected, selectElement } = usePageBuilderStore(
     useShallow((state) => ({
       element: state.document[elementId],
       isSelected: state.selectedElementId === elementId,
-      isRoot: state.rootElementId === elementId,
       selectElement: state.selectElement,
     }))
   );
+
   if (!element) {
     return null;
   }
 
-  const El = element.tag;
-  const isVoidElement = VOID_HTML_ELEMENTS.includes(element.tag);
+  const {
+    id,
+    tag: El,
+    isRoot,
+    style,
+    attributes,
+    value,
+    children,
+    isEditable,
+  } = element;
+  const isVoidElement = VOID_HTML_ELEMENTS.includes(El);
   const elementInteractiveStyle = {
     cursor: "default",
     userSelect: "none",
-    outline: isSelected ? "2px solid #3474e0" : "initial",
+    outline: !isRoot && isSelected ? "2px solid #3474e0" : "initial",
     outlineOffset: "-2px",
   };
   const elementStyle = {
-    ...element.style,
+    ...style,
     ...elementInteractiveStyle,
   };
+  const shouldDisableHighlight = !isEditable || isRoot;
 
   const handleMouseOver = (e) => {
     e.stopPropagation();
+
+    if (shouldDisableHighlight) {
+      return;
+    }
 
     if (!isSelected) {
       e.target.style.outline = "1px solid #3474e0";
@@ -39,6 +54,10 @@ const TemplateElementRenderer = ({ elementId }) => {
   const handleMouseOut = (e) => {
     e.stopPropagation();
 
+    if (shouldDisableHighlight) {
+      return;
+    }
+
     if (!isSelected) {
       e.target.style.outline = "none";
     }
@@ -47,24 +66,28 @@ const TemplateElementRenderer = ({ elementId }) => {
   const handleClick = (e) => {
     e.stopPropagation();
 
+    if (!isEditable) {
+      return;
+    }
+
     if (!isSelected) {
-      selectElement(element.id);
+      selectElement(id);
     }
   };
 
   return (
     <El
-      key={element.id}
+      key={id}
       style={elementStyle}
-      {...element.attributes}
+      {...attributes}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onClick={handleClick}
     >
       {isVoidElement ? undefined : (
         <>
-          {element.value}
-          {element.children?.map((childId) => (
+          {value}
+          {children?.map((childId) => (
             <TemplateElementRenderer key={childId} elementId={childId} />
           ))}
         </>
@@ -73,4 +96,4 @@ const TemplateElementRenderer = ({ elementId }) => {
   );
 };
 
-export default TemplateElementRenderer;
+export default memo(TemplateElementRenderer);

@@ -10,7 +10,6 @@
 }
 
 .template-builder-page-container .right-panel {
-  padding-top: var(--spacing-3);
   width: 400px;
   height: 100%;
   box-shadow: 0px 2px 12px 0px rgba(43, 43, 43, 0.12);

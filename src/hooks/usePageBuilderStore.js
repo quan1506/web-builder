@@ -23,33 +23,28 @@ const usePageBuilderStore = create(
             state.document[elementId].tag = tag;
           });
         },
-        updateElementStyle: (elementId, { attributeName, attributeValue }) => {
+        updateElementStyle: (elementId, style) => {
           set((state) => {
             if (!state.document[elementId]) {
               return;
             }
-            if (!state.document[elementId].style) {
-              state.document[elementId].style = {};
-            }
 
-            state.document[elementId].style[attributeName] = attributeValue;
+            state.document[elementId].style = {
+              ...state.document[elementId].style,
+              ...style,
+            };
           });
         },
-        updateElementAttributes: (
-          elementId,
-          { attributeName, attributeValue }
-        ) => {
+        updateElementAttributes: (elementId, attribute) => {
           set((state) => {
             if (!state.document[elementId]) {
               return;
             }
 
-            if (!state.document[elementId].props) {
-              state.document[elementId].attributes = {};
-            }
-
-            state.document[elementId].attributes[attributeName] =
-              attributeValue;
+            state.document[elementId].attributes = {
+              ...state.document[elementId].attributes,
+              ...attribute,
+            };
           });
         },
         updateElementTextContent: (elementId, textContent) => {
@@ -65,7 +60,7 @@ const usePageBuilderStore = create(
           set({
             templateId: template.id,
             rootElementId: template.rootId,
-            selectedElementId: null,
+            selectedElementId: template.rootId,
             document: template.document,
           });
         },

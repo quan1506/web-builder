@@ -37,3 +37,9 @@ h5 {
 h6 {
   font-size: var(--fontSizes-2);
 }
+
+label {
+  font-size: var(--fontSizes-4);
+  font-weight: var(--fontWeights-semibold);
+  color: var(--colors-neutral-800);
+}
