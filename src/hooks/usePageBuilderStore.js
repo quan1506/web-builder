@@ -14,7 +14,7 @@ const usePageBuilderStore = create(
 
         setTemplateId: (templateId) => set({ templateId }),
         selectElement: (elementId) => set({ selectedElementId: elementId }),
-        updateElementTagName: (elementId, tag) => {
+        updateElementTag: (elementId, tag) => {
           set((state) => {
             if (!state.document[elementId]) {
               return;

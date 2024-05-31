@@ -1,8 +1,13 @@
 import { usePageBuilderStore } from "../../hooks";
 import PageSettings from "../page-settings";
+import HeadingSettings from "../heading-settings";
+import TextSettings from "../text-setting";
 import "./settingsPanel.css";
 
-const SETTINGS_COMPONENT_MAP = {};
+const SETTINGS_COMPONENT_MAP = {
+  heading: HeadingSettings,
+  paragraph: TextSettings,
+};
 
 const SettingsPanel = () => {
   const selectedElement = usePageBuilderStore((state) =>

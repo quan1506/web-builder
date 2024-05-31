@@ -1,3 +1,4 @@
+import BaseFormField from "../base-form-field";
 import { useId } from "../../hooks";
 import "./rangeSliderFormField.css";
 
@@ -5,12 +6,7 @@ const RangeSliderFormField = ({ label, min, max, value, onChange }) => {
   const inputId = useId("range-input-");
 
   return (
-    <div className="range-slider-form-field">
-      <div>
-        <label htmlFor={inputId}>{label}</label>
-        <span className="range-slider-form-field-current-value">{value}</span>
-      </div>
-
+    <BaseFormField label={label} labelHtmlFor={inputId} helperText={value}>
       <input
         type="range"
         id={inputId}
@@ -20,7 +16,7 @@ const RangeSliderFormField = ({ label, min, max, value, onChange }) => {
         onChange={onChange}
         className="range-slider-form-field-input"
       />
-    </div>
+    </BaseFormField>
   );
 };
 

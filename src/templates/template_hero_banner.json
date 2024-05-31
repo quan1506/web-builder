@@ -65,8 +65,9 @@
       "tag": "h1",
       "isEditable": true,
       "style": {
+        "margin": "16px 0",
         "fontSize": 40,
-        "fontWeight": 600,
+        "fontWeight": 700,
         "color": "#272727",
         "textAlign": "center"
       },
@@ -78,7 +79,10 @@
       "tag": "p",
       "isEditable": true,
       "style": {
+        "margin": "8px 0",
+        "whiteSpace": "pre-line",
         "fontSize": 18,
+        "fontWeight": 400,
         "color": "#646464",
         "textAlign": "center"
       },

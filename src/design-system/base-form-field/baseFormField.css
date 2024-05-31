@@ -1,0 +1,18 @@
+.base-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.base-form-field-label-container {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-2);
+}
+
+.base-form-field-helper-text {
+  font-size: var(--fontSizes-2);
+  font-weight: var(--fontWeights-medium);
+  color: var(--colors-neutral-500);
+  text-transform: uppercase;
+}

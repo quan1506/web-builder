@@ -12,8 +12,11 @@ const Iframe = ({ children, title, ...props }) => {
     }
 
     const styleEl = document.createElement("style");
-    styleEl.textContent =
-      "body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden }, *, *::before, *::after { box-sizing: border-box; }";
+    styleEl.textContent = `
+      body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden },
+      *, *::before, *::after { box-sizing: border-box; }
+      h1, h2, h3, h4, h5, h6, p, img { margin: 0; padding: 0; }
+      `;
     iframeDocument.head.appendChild(styleEl);
   }, [iframeDocument]);
 
