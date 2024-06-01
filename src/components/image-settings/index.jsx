@@ -1,3 +1,4 @@
+import { IMAGE_WIDTH_RANGE } from "../../config";
 import { RangeSliderFormField, TextFormField } from "../../design-system";
 import { useGetPageWidth, usePageBuilderStore } from "../../hooks";
 
@@ -33,8 +34,8 @@ const ImageSettings = ({ element }) => {
       <RangeSliderFormField
         label="Width"
         value={attributes?.width || 0}
-        min={100}
-        max={pageWidth || 1024}
+        min={IMAGE_WIDTH_RANGE.min}
+        max={pageWidth || IMAGE_WIDTH_RANGE.max}
         onChange={handleImageWidthChange}
       />
       <TextFormField

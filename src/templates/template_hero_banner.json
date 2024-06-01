@@ -3,7 +3,7 @@
   "name": "Hero Banner",
   "description": "A template for a simple hero banner",
   "thumbnail": "template_hero_banner.png",
-  "rootId": "page-wrapper",
+  "rootElementId": "page-wrapper",
   "document": {
     "page-wrapper": {
       "id": "page-wrapper",

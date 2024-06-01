@@ -3,6 +3,6 @@
   "name": "Newsletter",
   "description": "A template for a two-columns layout newsletter",
   "thumbnail": "template_newsletter.png",
-  "rootId": "root",
+  "rootElementId": "root",
   "document": {}
 }

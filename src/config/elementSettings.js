@@ -11,3 +11,35 @@ export const HEADING_TAG_OPTIONS = [
   { value: "h5", label: "H5" },
   { value: "h6", label: "H6" },
 ];
+
+export const VOID_HTML_ELEMENTS = [
+  "area",
+  "base",
+  "br",
+  "col",
+  "embed",
+  "hr",
+  "img",
+  "input",
+  "link",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr",
+];
+
+export const FONT_SIZE_RANGE = {
+  min: 6,
+  max: 80,
+};
+
+export const PAGE_WIDTH_RANGE = {
+  min: 300,
+  max: 1024,
+};
+
+export const IMAGE_WIDTH_RANGE = {
+  min: 100,
+  max: 1024,
+};

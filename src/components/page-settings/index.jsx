@@ -1,4 +1,5 @@
 import { ColorFormField, RangeSliderFormField } from "../../design-system";
+import { PAGE_WIDTH_RANGE } from "../../config";
 import { usePageSettings } from "../../hooks";
 
 const PageSettings = ({ element: rootElement }) => {
@@ -21,8 +22,8 @@ const PageSettings = ({ element: rootElement }) => {
       />
       <RangeSliderFormField
         label="Page width"
-        min={300}
-        max={1024}
+        min={PAGE_WIDTH_RANGE.min}
+        max={PAGE_WIDTH_RANGE.max}
         value={pageWidth}
         onChange={(e) => updatePageWidth(Number(e.target.value))}
       />

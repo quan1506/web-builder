@@ -1,7 +1,6 @@
 import { useShallow } from "zustand/react/shallow";
 import { usePageBuilderStore } from "../../hooks";
-import { VOID_HTML_ELEMENTS } from "./constants";
-import { memo } from "react";
+import { VOID_HTML_ELEMENTS } from "../../config";
 
 const TemplateElementRenderer = ({ elementId }) => {
   const { element, isSelected, selectElement } = usePageBuilderStore(
@@ -84,14 +83,13 @@ const TemplateElementRenderer = ({ elementId }) => {
 
   return (
     <El
-      key={id}
       style={elementStyle}
       {...attributes}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onClick={handleClick}
     >
-      {isVoidElement ? undefined : (
+      {isVoidElement ? null : (
         <>
           {value}
           {children?.map((childId) => (
@@ -103,4 +101,4 @@ const TemplateElementRenderer = ({ elementId }) => {
   );
 };
 
-export default memo(TemplateElementRenderer);
+export default TemplateElementRenderer;

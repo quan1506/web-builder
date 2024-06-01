@@ -1,4 +1,3 @@
-import { useShallow } from "zustand/react/shallow";
 import {
   AppBar,
   Iframe,
@@ -10,11 +9,7 @@ import { usePageBuilderStore } from "../../hooks";
 import "./TemplateBuilderPage.css";
 
 const TemplateBuilderPage = () => {
-  const { rootElementId } = usePageBuilderStore(
-    useShallow((state) => ({
-      rootElementId: state.rootElementId,
-    }))
-  );
+  const rootElementId = usePageBuilderStore((state) => state.rootElementId);
 
   return (
     <div>

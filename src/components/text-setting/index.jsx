@@ -6,7 +6,7 @@ import {
   TextareaFormField,
 } from "../../design-system";
 import { usePageBuilderStore } from "../../hooks";
-import { FONT_WEIGHT_OPTIONS } from "../../config";
+import { FONT_SIZE_RANGE, FONT_WEIGHT_OPTIONS } from "../../config";
 
 const TextSettings = ({ element }) => {
   const { id, style } = element;
@@ -42,8 +42,8 @@ const TextSettings = ({ element }) => {
       />
       <RangeSliderFormField
         label="Font size"
-        min={6}
-        max={80}
+        min={FONT_SIZE_RANGE.min}
+        max={FONT_SIZE_RANGE.max}
         value={style.fontSize}
         onChange={handleFontSizeChange}
       />

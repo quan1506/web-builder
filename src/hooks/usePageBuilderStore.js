@@ -59,8 +59,8 @@ const usePageBuilderStore = create(
         loadTemplate: (template) => {
           set({
             templateId: template.id,
-            rootElementId: template.rootId,
-            selectedElementId: template.rootId,
+            rootElementId: template.rootElementId,
+            selectedElementId: template.rootElementId,
             document: template.document,
           });
         },
