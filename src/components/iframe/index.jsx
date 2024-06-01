@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import "./iframe.css";
 
-const Iframe = ({ children, title, ...props }) => {
+const Iframe = ({ children, title }) => {
   const [iframeDocument, setIframeDocument] = useState(null);
   const iframeBody = iframeDocument?.body;
 
@@ -21,13 +21,18 @@ const Iframe = ({ children, title, ...props }) => {
   }, [iframeDocument]);
 
   const handleIframeLoad = (event) => {
-    setIframeDocument(event.target?.contentDocument);
+    if (iframeDocument) {
+      return;
+    }
+
+    const iframeDoc = event.target?.contentDocument;
+    if (iframeDoc) {
+      setIframeDocument(iframeDoc);
+    }
   };
 
   return (
     <iframe
-      {...props}
-      src="about:blank"
       srcDoc="<!DOCTYPE html>"
       title={title}
       onLoad={handleIframeLoad}

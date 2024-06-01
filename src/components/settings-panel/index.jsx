@@ -3,10 +3,12 @@ import PageSettings from "../page-settings";
 import HeadingSettings from "../heading-settings";
 import TextSettings from "../text-setting";
 import "./settingsPanel.css";
+import ImageSettings from "../image-settings";
 
 const SETTINGS_COMPONENT_MAP = {
   heading: HeadingSettings,
   paragraph: TextSettings,
+  image: ImageSettings,
 };
 
 const SettingsPanel = () => {
@@ -17,7 +19,7 @@ const SettingsPanel = () => {
   );
   const SettingsComponent = selectedElement?.isRoot
     ? PageSettings
-    : SETTINGS_COMPONENT_MAP[selectedElement?.type];
+    : SETTINGS_COMPONENT_MAP[selectedElement?.type] || null;
 
   const settingsTitle = selectedElement
     ? `${selectedElement.isRoot ? "Page" : selectedElement.type} Settings`

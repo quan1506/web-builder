@@ -19,6 +19,7 @@ const TemplateElementRenderer = ({ elementId }) => {
   const {
     id,
     tag: El,
+    type,
     isRoot,
     style,
     attributes,
@@ -33,9 +34,15 @@ const TemplateElementRenderer = ({ elementId }) => {
     outline: !isRoot && isSelected ? "2px solid #3474e0" : "initial",
     outlineOffset: "-2px",
   };
+  const imagePlaceholderStyle = {
+    aspectRatio: "1 / 1",
+  };
   const elementStyle = {
     ...style,
     ...elementInteractiveStyle,
+    ...(type === "image" &&
+      attributes.src === "/image-placeholder.jpg" &&
+      imagePlaceholderStyle),
   };
   const shouldDisableHighlight = !isEditable || isRoot;
 
