@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import "./iframe.css";
 
-const Iframe = ({ children, title }) => {
+const Iframe = ({ children, title, isRenderedInsideButton, className }) => {
   const [iframeDocument, setIframeDocument] = useState(null);
   const iframeBody = iframeDocument?.body;
 
@@ -13,12 +13,14 @@ const Iframe = ({ children, title }) => {
 
     const styleEl = document.createElement("style");
     styleEl.textContent = `
-      body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden },
+      body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; cursor: ${
+        isRenderedInsideButton ? "pointer" : "initial"
+      };,
       *, *::before, *::after { box-sizing: border-box; }
       h1, h2, h3, h4, h5, h6, p, img { margin: 0; padding: 0; }
       `;
     iframeDocument.head.appendChild(styleEl);
-  }, [iframeDocument]);
+  }, [iframeDocument, isRenderedInsideButton]);
 
   const handleIframeLoad = (event) => {
     if (iframeDocument) {
@@ -36,7 +38,7 @@ const Iframe = ({ children, title }) => {
       srcDoc="<!DOCTYPE html>"
       title={title}
       onLoad={handleIframeLoad}
-      className="iframe-container"
+      className={className || "iframe-container"}
     >
       {iframeBody &&
         createPortal(

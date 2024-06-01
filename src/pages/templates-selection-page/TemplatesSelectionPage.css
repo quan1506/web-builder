@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-10);
+  gap: var(--spacing-12);
 }
 
 .template-list-title {
@@ -18,4 +18,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--spacing-6);
+}
+
+@media screen and (max-width: 1024px) {
+  .template-list-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .template-list-container {
+    grid-template-columns: 1fr;
+  }
 }

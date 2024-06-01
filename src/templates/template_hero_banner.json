@@ -1,8 +1,7 @@
 {
   "id": "template_hero_banner",
   "name": "Hero Banner",
-  "description": "A template for a simple hero banner",
-  "thumbnail": "template_hero_banner.png",
+  "description": "A template for a simple hero banner.",
   "rootElementId": "page-wrapper",
   "document": {
     "page-wrapper": {
