@@ -7,6 +7,17 @@
   border: none;
   box-shadow: 2px 2px 16px 0px rgba(53, 53, 53, 0.08);
   cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.template-card:hover {
+  box-shadow: 2px 2px 16px 0px rgba(53, 53, 53, 0.32);
+}
+
+.template-preview-container {
+  height: 340px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .template-introduction-container {
@@ -18,7 +29,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-3);
-  padding: var(--spacing-5) var(--spacing-4);
+  padding: var(--spacing-4);
   transition: all 0.3s;
 }
 
@@ -31,28 +42,4 @@
 .template-description {
   font-size: var(--fontSizes-4);
   text-align: center;
-}
-
-.template-action-title {
-  display: none;
-  padding: var(--spacing-4);
-  font-weight: var(--fontWeights-semibold);
-  font-size: var(--fontSizes-5);
-  text-align: center;
-  color: var(--colors-white);
-}
-
-.template-card:hover > .template-introduction-container {
-  opacity: 0.8;
-  background: var(--colors-black);
-}
-
-.template-card:hover .template-action-title {
-  display: block;
-  position: absolute;
-}
-
-.template-card:hover .template-title,
-.template-card:hover .template-description {
-  visibility: hidden;
 }

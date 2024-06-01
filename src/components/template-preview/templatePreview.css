@@ -1,9 +1,3 @@
-.template-preview-container {
-  height: 340px;
-  width: 100%;
-  overflow: hidden;
-}
-
 .template-preview-iframe {
   border: none;
   transform-origin: 0px 0px;

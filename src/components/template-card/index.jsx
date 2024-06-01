@@ -8,11 +8,12 @@ const TemplateCard = ({ template, onClick }) => {
       onClick={onClick}
       aria-label={`Select ${template.name} template`}
     >
-      <TemplatePreview template={template} />
+      <div className="template-preview-container">
+        <TemplatePreview template={template} />
+      </div>
       <div className="template-introduction-container">
         <p className="template-title">{template.name}</p>
         <p className="template-description">{template.description}</p>
-        <p className="template-action-title">Use this template</p>
       </div>
     </button>
   );
