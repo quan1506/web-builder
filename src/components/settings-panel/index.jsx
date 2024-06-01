@@ -2,13 +2,15 @@ import { usePageBuilderStore } from "../../hooks";
 import PageSettings from "../page-settings";
 import HeadingSettings from "../heading-settings";
 import TextSettings from "../text-setting";
-import "./settingsPanel.css";
 import ImageSettings from "../image-settings";
+import ButtonSettings from "../button-settings";
+import "./settingsPanel.css";
 
 const SETTINGS_COMPONENT_MAP = {
   heading: HeadingSettings,
   paragraph: TextSettings,
   image: ImageSettings,
+  button: ButtonSettings,
 };
 
 const SettingsPanel = () => {

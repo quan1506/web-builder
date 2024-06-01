@@ -2,7 +2,7 @@ import BaseFormField from "../base-form-field";
 import { useId } from "../../hooks";
 import "./textAreaFormField.css";
 
-const TextAreaFormField = ({ label, value, onChange }) => {
+const TextAreaFormField = ({ label, value, onChange, ...props }) => {
   const inputId = useId("textarea-input-");
 
   return (
@@ -13,6 +13,7 @@ const TextAreaFormField = ({ label, value, onChange }) => {
         onChange={onChange}
         className="textarea-form-field-input"
         rows={6}
+        {...props}
       />
     </BaseFormField>
   );

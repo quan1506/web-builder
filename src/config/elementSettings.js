@@ -12,6 +12,11 @@ export const HEADING_TAG_OPTIONS = [
   { value: "h6", label: "H6" },
 ];
 
+export const LINK_TARGET_OPTIONS = [
+  { value: "_blank", label: "New window" },
+  { value: "_self", label: "Same window" },
+];
+
 export const VOID_HTML_ELEMENTS = [
   "area",
   "base",

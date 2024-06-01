@@ -2,6 +2,117 @@
   "id": "template_newsletter",
   "name": "Newsletter",
   "description": "A template for a two-columns layout newsletter",
-  "rootElementId": "root",
-  "document": {}
+  "rootElementId": "page-wrapper",
+  "document": {
+    "page-wrapper": {
+      "id": "page-wrapper",
+      "type": "block",
+      "isRoot": true,
+      "tag": "div",
+      "isEditable": true,
+      "style": {
+        "display": "flex",
+        "width": "100%",
+        "minHeight": "100%",
+        "padding": "12px 0",
+        "backgroundColor": "#C5FAFA"
+      },
+      "attributes": {
+        "data-test-id": "page-wrapper"
+      },
+      "children": ["page-content"]
+    },
+    "page-content": {
+      "id": "page-content",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "height": "100%",
+        "margin": "80px auto",
+        "width": 800,
+        "display": "flex",
+        "backgroundColor": "#009FA5"
+      },
+      "children": ["content-area", "right-image"]
+    },
+    "content-area": {
+      "id": "content-area",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "width": 400,
+        "padding": "32px",
+        "display": "flex",
+        "flexDirection": "column",
+        "gap": "20px"
+      },
+      "children": ["title", "content", "cta-button"]
+    },
+    "right-image": {
+      "id": "right-image",
+      "type": "image",
+      "tag": "img",
+      "isEditable": true,
+      "style": {
+        "marginLeft": "auto",
+        "maxWidth": "100%"
+      },
+      "attributes": {
+        "src": "/image-placeholder.jpg",
+        "width": 400,
+        "height": "auto",
+        "alt": "Placeholder image"
+      }
+    },
+    "title": {
+      "id": "title",
+      "type": "heading",
+      "tag": "h1",
+      "isEditable": true,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 700,
+        "color": "#ffffff"
+      },
+      "value": "Newsletter"
+    },
+    "content": {
+      "id": "content",
+      "type": "paragraph",
+      "tag": "p",
+      "isEditable": true,
+      "style": {
+        "whiteSpace": "pre-line",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "color": "#ffffff"
+      },
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt fermentum. Nullam nec purus nec nunc tincidunt fermentum. Nullam nec purus nec nunc tincidunt fermentum."
+    },
+    "cta-button": {
+      "id": "cta-button",
+      "type": "button",
+      "tag": "a",
+      "isEditable": true,
+      "style": {
+        "alignSelf": "flex-start",
+        "marginTop": "24px",
+        "padding": "12px 24px",
+        "backgroundColor": "#ffffff",
+        "color": "#222222",
+        "borderRadius": 4,
+        "fontSize": 16,
+        "fontWeight": 700,
+        "textAlign": "center",
+        "textDecoration": "none"
+      },
+      "attributes": {
+        "href": "",
+        "target": "_blank"
+      },
+      "value": "Call to action"
+    }
+  }
 }

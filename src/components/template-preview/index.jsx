@@ -6,15 +6,13 @@ const TemplatePreview = ({ template }) => {
   const rootElement = template.document[template.rootElementId];
 
   return (
-    <div className="template-preview-container">
-      <Iframe
-        title={`Template preview - ${template.name}`}
-        className="template-preview-iframe"
-        isRenderedInsideButton
-      >
-        <ElementPreview element={rootElement} template={template} />
-      </Iframe>
-    </div>
+    <Iframe
+      title={`Template preview - ${template.name}`}
+      className="template-preview-iframe"
+      isPreview
+    >
+      <ElementPreview element={rootElement} template={template} />
+    </Iframe>
   );
 };
 

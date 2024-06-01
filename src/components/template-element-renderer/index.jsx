@@ -70,6 +70,7 @@ const TemplateElementRenderer = ({ elementId }) => {
   };
 
   const handleClick = (e) => {
+    e.preventDefault();
     e.stopPropagation();
 
     if (!isEditable) {
