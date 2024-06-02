@@ -58,10 +58,9 @@
         "maxWidth": "100%"
       },
       "attributes": {
-        "src": "/image-placeholder.png",
+        "src": "",
         "width": 400,
-        "height": "auto",
-        "alt": "Placeholder image"
+        "height": "auto"
       }
     },
     "title": {

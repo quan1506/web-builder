@@ -65,10 +65,9 @@
         "aspectRatio": "1/1"
       },
       "attributes": {
-        "src": "/image-placeholder.png",
+        "src": "",
         "width": "100%",
-        "height": "auto",
-        "alt": "Placeholder image"
+        "height": "auto"
       },
       "lockedAttributes": ["width"]
     },
@@ -151,10 +150,9 @@
         "aspectRatio": "1/1"
       },
       "attributes": {
-        "src": "/image-placeholder.png",
+        "src": "",
         "width": "100%",
-        "height": "auto",
-        "alt": "Placeholder image"
+        "height": "auto"
       },
       "lockedAttributes": ["width"]
     },
@@ -237,10 +235,9 @@
         "aspectRatio": "1/1"
       },
       "attributes": {
-        "src": "/image-placeholder.png",
+        "src": "",
         "width": "100%",
-        "height": "auto",
-        "alt": "Placeholder image"
+        "height": "auto"
       },
       "lockedAttributes": ["width"]
     },

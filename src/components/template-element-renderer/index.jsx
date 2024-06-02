@@ -1,6 +1,7 @@
 import { useShallow } from "zustand/react/shallow";
 import { usePageBuilderStore } from "../../hooks";
 import { VOID_HTML_ELEMENTS } from "../../config";
+import image_placeholder from "../../assets/image-placeholder.png";
 
 const TemplateElementRenderer = ({ elementId }) => {
   const { element, isSelected, selectElement } = usePageBuilderStore(
@@ -27,6 +28,9 @@ const TemplateElementRenderer = ({ elementId }) => {
     isEditable,
   } = element;
   const isVoidElement = VOID_HTML_ELEMENTS.includes(El);
+  const shouldShowPlaceholderImage =
+    type === "image" && (!attributes?.src || attributes.src === "");
+
   const elementInteractiveStyle = {
     cursor: "default",
     userSelect: "none",
@@ -39,10 +43,14 @@ const TemplateElementRenderer = ({ elementId }) => {
   const elementStyle = {
     ...style,
     ...elementInteractiveStyle,
-    ...(type === "image" &&
-      attributes.src === "/image-placeholder.png" &&
-      imagePlaceholderStyle),
+    ...(shouldShowPlaceholderImage && imagePlaceholderStyle),
   };
+  const elementAttributes = shouldShowPlaceholderImage
+    ? {
+        ...attributes,
+        src: image_placeholder,
+      }
+    : attributes;
   const shouldDisableHighlight = !isEditable || isRoot;
 
   const handleMouseOver = (e) => {
@@ -85,7 +93,7 @@ const TemplateElementRenderer = ({ elementId }) => {
   return (
     <El
       style={elementStyle}
-      {...attributes}
+      {...elementAttributes}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onClick={handleClick}

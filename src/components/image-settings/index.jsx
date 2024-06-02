@@ -27,8 +27,9 @@ const ImageSettings = ({ element }) => {
   return (
     <>
       <TextFormField
-        label="Source"
+        label="Image address"
         value={attributes?.src || ""}
+        placeholder="https://"
         onChange={handleImageSrcChange}
       />
       {lockedAttributes?.includes("width") ? null : (
@@ -43,6 +44,7 @@ const ImageSettings = ({ element }) => {
       <TextFormField
         label="Description"
         value={attributes?.alt || ""}
+        placeholder="Describe this image..."
         onChange={handleImageAltChange}
       />
     </>
