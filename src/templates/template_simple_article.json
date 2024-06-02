@@ -1,7 +1,7 @@
 {
-  "id": "template_hero_banner",
-  "name": "Hero Banner",
-  "description": "A template for a simple hero banner.",
+  "id": "template_simple_article",
+  "name": "Article",
+  "description": "A template for a simple article",
   "rootElementId": "page-wrapper",
   "document": {
     "page-wrapper": {
@@ -87,14 +87,13 @@
       "isEditable": true,
       "style": {
         "margin": "8px 0",
-        "padding": "0 24px",
+        "padding": "0 36px",
         "whiteSpace": "pre-line",
         "fontSize": 18,
         "fontWeight": 400,
-        "color": "#646464",
-        "textAlign": "center"
+        "color": "#646464"
       },
-      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id. \n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id."
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id. \n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id."
     }
   }
 }
