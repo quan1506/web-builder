@@ -15,7 +15,7 @@
         "width": "100%",
         "minHeight": "100%",
         "padding": "12px 0",
-        "backgroundColor": "#FFEDF4"
+        "backgroundColor": "#e7f5ce"
       },
       "attributes": {
         "data-test-id": "page-wrapper"
@@ -29,10 +29,13 @@
       "isEditable": false,
       "style": {
         "margin": "0 auto",
-        "width": 600,
+        "width": 700,
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
         "backgroundColor": "#ffffff"
       },
-      "children": ["element-list"]
+      "children": ["element-1", "element-2", "element-3"]
     },
     "element-list": {
       "id": "element-list",
@@ -56,8 +59,8 @@
         "maxWidth": "100%"
       },
       "attributes": {
-        "src": "/image-placeholder.jpg",
-        "width": 460,
+        "src": "/image-placeholder.png",
+        "width": 560,
         "height": "auto",
         "alt": "Placeholder image"
       }
@@ -68,7 +71,7 @@
       "tag": "h1",
       "isEditable": true,
       "style": {
-        "margin": "16px 0",
+        "margin": "20px 0",
         "padding": "0 24px",
         "fontSize": 40,
         "fontWeight": 700,
@@ -91,7 +94,7 @@
         "color": "#646464",
         "textAlign": "center"
       },
-      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id."
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id. \n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at neque at sem varius auctor. Ut bibendum nec velit ac elementum. Integer iaculis massa mi, rhoncus porttitor urna tincidunt id."
     }
   }
 }

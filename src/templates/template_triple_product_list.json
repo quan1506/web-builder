@@ -2,6 +2,298 @@
   "id": "template_triple_product_list",
   "name": "Triple Product List",
   "description": "A template for display three products in a row",
-  "rootElementId": "root",
-  "document": {}
+  "rootElementId": "page-wrapper",
+  "document": {
+    "page-wrapper": {
+      "id": "page-wrapper",
+      "type": "block",
+      "isRoot": true,
+      "tag": "div",
+      "isEditable": true,
+      "style": {
+        "width": "100%",
+        "minHeight": "100%",
+        "padding": "12px 0",
+        "backgroundColor": "#ffcd97"
+      },
+      "attributes": {
+        "data-test-id": "page-wrapper"
+      },
+      "children": ["page-content"]
+    },
+    "page-content": {
+      "id": "page-content",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "margin": "80px auto",
+        "width": 900,
+        "padding": "48px 24px",
+        "display": "grid",
+        "gridTemplateColumns": "1fr 1fr 1fr",
+        "gridGap": "20px",
+        "backgroundColor": "#fff1e2"
+      },
+      "children": ["product-1", "product-2", "product-3"]
+    },
+    "product-1": {
+      "id": "product-1",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "backgroundColor": "#fff",
+        "padding": "20px",
+        "borderRadius": "8px",
+        "boxShadow": "0 0 10px rgba(0,0,0,0.1)"
+      },
+      "children": [
+        "product-1-image",
+        "product-1-title",
+        "product-1-price",
+        "product-1-button"
+      ]
+    },
+    "product-1-image": {
+      "id": "product-1-image",
+      "type": "image",
+      "tag": "img",
+      "isEditable": true,
+      "style": {
+        "maxWidth": "100%",
+        "aspectRatio": "1/1"
+      },
+      "attributes": {
+        "src": "/image-placeholder.png",
+        "width": "100%",
+        "height": "auto",
+        "alt": "Placeholder image"
+      },
+      "lockedAttributes": ["width"]
+    },
+    "product-1-title": {
+      "id": "product-1-title",
+      "type": "heading",
+      "tag": "h3",
+      "isEditable": true,
+      "style": {
+        "marginTop": 8,
+        "fontSize": 20,
+        "fontWeight": 400,
+        "color": "#222222"
+      },
+      "value": "Product 1"
+    },
+    "product-1-price": {
+      "id": "product-1-price",
+      "type": "paragraph",
+      "tag": "p",
+      "isEditable": true,
+      "style": {
+        "marginTop": 12,
+        "fontSize": 18,
+        "fontWeight": 600,
+        "color": "#222222"
+      },
+      "value": "$19.99"
+    },
+    "product-1-button": {
+      "id": "product-1-button",
+      "type": "button",
+      "tag": "a",
+      "isEditable": true,
+      "style": {
+        "display": "block",
+        "marginTop": 20,
+        "padding": "12px 24px",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "color": "#ffffff",
+        "backgroundColor": "#ffa24a",
+        "border": "none",
+        "borderRadius": "4px",
+        "cursor": "pointer",
+        "textDecoration": "none",
+        "textAlign": "center"
+      },
+      "attributes": {
+        "href": "",
+        "target": "_blank"
+      },
+      "value": "View Product"
+    },
+    "product-2": {
+      "id": "product-2",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "backgroundColor": "#fff",
+        "padding": "20px",
+        "borderRadius": "8px",
+        "boxShadow": "0 0 10px rgba(0,0,0,0.1)"
+      },
+      "children": [
+        "product-2-image",
+        "product-2-title",
+        "product-2-price",
+        "product-2-button"
+      ]
+    },
+    "product-2-image": {
+      "id": "product-2-image",
+      "type": "image",
+      "tag": "img",
+      "isEditable": true,
+      "style": {
+        "maxWidth": "100%",
+        "aspectRatio": "1/1"
+      },
+      "attributes": {
+        "src": "/image-placeholder.png",
+        "width": "100%",
+        "height": "auto",
+        "alt": "Placeholder image"
+      },
+      "lockedAttributes": ["width"]
+    },
+    "product-2-title": {
+      "id": "product-2-title",
+      "type": "heading",
+      "tag": "h3",
+      "isEditable": true,
+      "style": {
+        "marginTop": 8,
+        "fontSize": 20,
+        "fontWeight": 400,
+        "color": "#222222"
+      },
+      "value": "Product 2"
+    },
+    "product-2-price": {
+      "id": "product-2-price",
+      "type": "paragraph",
+      "tag": "p",
+      "isEditable": true,
+      "style": {
+        "marginTop": 12,
+        "fontSize": 18,
+        "fontWeight": 600,
+        "color": "#222222"
+      },
+      "value": "$22.99"
+    },
+    "product-2-button": {
+      "id": "product-2-button",
+      "type": "button",
+      "tag": "a",
+      "isEditable": true,
+      "style": {
+        "display": "block",
+        "marginTop": 20,
+        "padding": "12px 24px",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "color": "#ffffff",
+        "backgroundColor": "#ffa24a",
+        "border": "none",
+        "borderRadius": "4px",
+        "cursor": "pointer",
+        "textDecoration": "none",
+        "textAlign": "center"
+      },
+      "attributes": {
+        "href": "",
+        "target": "_blank"
+      },
+      "value": "View Product"
+    },
+    "product-3": {
+      "id": "product-3",
+      "type": "block",
+      "tag": "div",
+      "isEditable": false,
+      "style": {
+        "backgroundColor": "#fff",
+        "padding": "20px",
+        "borderRadius": "8px",
+        "boxShadow": "0 0 10px rgba(0,0,0,0.1)"
+      },
+      "children": [
+        "product-3-image",
+        "product-3-title",
+        "product-3-price",
+        "product-3-button"
+      ]
+    },
+    "product-3-image": {
+      "id": "product-3-image",
+      "type": "image",
+      "tag": "img",
+      "isEditable": true,
+      "style": {
+        "maxWidth": "100%",
+        "aspectRatio": "1/1"
+      },
+      "attributes": {
+        "src": "/image-placeholder.png",
+        "width": "100%",
+        "height": "auto",
+        "alt": "Placeholder image"
+      },
+      "lockedAttributes": ["width"]
+    },
+    "product-3-title": {
+      "id": "product-3-title",
+      "type": "heading",
+      "tag": "h3",
+      "isEditable": true,
+      "style": {
+        "marginTop": 8,
+        "fontSize": 20,
+        "fontWeight": 400,
+        "color": "#222222"
+      },
+      "value": "Product 3"
+    },
+    "product-3-price": {
+      "id": "product-3-price",
+      "type": "paragraph",
+      "tag": "p",
+      "isEditable": true,
+      "style": {
+        "marginTop": 12,
+        "fontSize": 18,
+        "fontWeight": 600,
+        "color": "#222222"
+      },
+      "value": "$25.99"
+    },
+    "product-3-button": {
+      "id": "product-3-button",
+      "type": "button",
+      "tag": "a",
+      "isEditable": true,
+      "style": {
+        "display": "block",
+        "marginTop": 20,
+        "padding": "12px 24px",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "color": "#ffffff",
+        "backgroundColor": "#ffa24a",
+        "border": "none",
+        "borderRadius": "4px",
+        "cursor": "pointer",
+        "textDecoration": "none",
+        "textAlign": "center"
+      },
+      "attributes": {
+        "href": "",
+        "target": "_blank"
+      },
+      "value": "View Product"
+    }
+  }
 }
