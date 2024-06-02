@@ -47,7 +47,7 @@ const Iframe = ({ children, title, isPreview, className }) => {
               margin: isPreview ? 0 : "0px -20px 0px 0px",
               height: "100%",
               overflowX: "hidden",
-              overflowY: "auto",
+              overflowY: isPreview ? "hidden" : "auto",
             }}
           >
             {children}

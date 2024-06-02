@@ -29,7 +29,7 @@ const ElementPreview = ({ element, template }) => {
     ...style,
     userSelect: "none",
     ...(type === "image" &&
-      attributes.src === "/image-placeholder.jpg" &&
+      attributes.src === "/image-placeholder.png" &&
       imagePlaceholderStyle),
   };
   const isVoidElement = VOID_HTML_ELEMENTS.includes(El);

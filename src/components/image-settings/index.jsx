@@ -3,7 +3,7 @@ import { RangeSliderFormField, TextFormField } from "../../design-system";
 import { useGetPageWidth, usePageBuilderStore } from "../../hooks";
 
 const ImageSettings = ({ element }) => {
-  const { id, attributes } = element;
+  const { id, attributes, lockedAttributes } = element;
   const updateElementAttributes = usePageBuilderStore(
     (state) => state.updateElementAttributes
   );
@@ -31,13 +31,15 @@ const ImageSettings = ({ element }) => {
         value={attributes?.src || ""}
         onChange={handleImageSrcChange}
       />
-      <RangeSliderFormField
-        label="Width"
-        value={attributes?.width || 0}
-        min={IMAGE_WIDTH_RANGE.min}
-        max={pageWidth || IMAGE_WIDTH_RANGE.max}
-        onChange={handleImageWidthChange}
-      />
+      {lockedAttributes?.includes("width") ? null : (
+        <RangeSliderFormField
+          label="Width"
+          value={attributes?.width || 0}
+          min={IMAGE_WIDTH_RANGE.min}
+          max={pageWidth || IMAGE_WIDTH_RANGE.max}
+          onChange={handleImageWidthChange}
+        />
+      )}
       <TextFormField
         label="Description"
         value={attributes?.alt || ""}

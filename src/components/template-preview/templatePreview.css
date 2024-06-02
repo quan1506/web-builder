@@ -2,9 +2,9 @@
   border: none;
   transform-origin: 0px 0px;
   will-change: transform;
-  width: 200%;
-  height: 200%;
-  transform: scale(0.5);
+  width: 250%;
+  height: 250%;
+  transform: scale(0.4);
   border-top-left-radius: var(--radii-2);
   border-top-right-radius: var(--radii-2);
 }

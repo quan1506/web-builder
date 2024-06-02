@@ -40,7 +40,7 @@ const TemplateElementRenderer = ({ elementId }) => {
     ...style,
     ...elementInteractiveStyle,
     ...(type === "image" &&
-      attributes.src === "/image-placeholder.jpg" &&
+      attributes.src === "/image-placeholder.png" &&
       imagePlaceholderStyle),
   };
   const shouldDisableHighlight = !isEditable || isRoot;
