@@ -24,7 +24,3 @@
 .FDButton.primary:hover {
   background-color: var(--colors-neutral-700);
 }
-
-.FDButton.loading {
-  cursor: wait;
-}

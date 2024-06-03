@@ -1,5 +1,5 @@
 {
-  "id": "template_simple_article",
+  "id": "tpl_simple_article",
   "name": "Article",
   "description": "A template for a simple article",
   "rootElementId": "page-wrapper",
@@ -29,6 +29,7 @@
       "isEditable": false,
       "style": {
         "margin": "0 auto",
+        "padding": "10px 0",
         "width": 700,
         "display": "flex",
         "flexDirection": "column",

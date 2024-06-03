@@ -11,6 +11,7 @@
 
 .template-list-title {
   text-align: center;
+  user-select: none;
 }
 
 .template-list-container {

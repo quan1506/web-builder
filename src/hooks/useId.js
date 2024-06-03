@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import uniqueId from "lodash/fp/uniqueId";
+import uniqueId from "lodash/uniqueId";
 
 const useId = (prefix) => {
   return useMemo(() => uniqueId(prefix), [prefix]);

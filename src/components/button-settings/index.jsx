@@ -59,6 +59,7 @@ const ButtonSettings = ({ element }) => {
       <TextareaFormField
         label="Link to"
         value={attributes.href}
+        placeholder="https://"
         onChange={handleLinkAttributeChange}
         rows={3}
       />

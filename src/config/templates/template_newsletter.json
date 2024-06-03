@@ -1,5 +1,5 @@
 {
-  "id": "template_newsletter",
+  "id": "tpl_newsletter",
   "name": "Newsletter",
   "description": "A template for a two-columns layout newsletter",
   "rootElementId": "page-wrapper",

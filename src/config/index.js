@@ -4,3 +4,4 @@ export const PagePath = {
 };
 
 export * from "./elementSettings";
+export * from "./templates";

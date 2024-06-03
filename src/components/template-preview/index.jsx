@@ -37,6 +37,7 @@ const ElementPreview = ({ element, template }) => {
     ? {
         ...attributes,
         src: image_placeholder,
+        draggable: false,
       }
     : attributes;
   const isVoidElement = VOID_HTML_ELEMENTS.includes(El);

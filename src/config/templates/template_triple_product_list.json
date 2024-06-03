@@ -1,5 +1,5 @@
 {
-  "id": "template_triple_product_list",
+  "id": "tpl_triple_product_list",
   "name": "Triple Product List",
   "description": "A template for display three products in a row",
   "rootElementId": "page-wrapper",
@@ -74,7 +74,7 @@
     "product-1-title": {
       "id": "product-1-title",
       "type": "heading",
-      "tag": "h3",
+      "tag": "h4",
       "isEditable": true,
       "style": {
         "marginTop": 8,
@@ -159,7 +159,7 @@
     "product-2-title": {
       "id": "product-2-title",
       "type": "heading",
-      "tag": "h3",
+      "tag": "h4",
       "isEditable": true,
       "style": {
         "marginTop": 8,
@@ -244,7 +244,7 @@
     "product-3-title": {
       "id": "product-3-title",
       "type": "heading",
-      "tag": "h3",
+      "tag": "h4",
       "isEditable": true,
       "style": {
         "marginTop": 8,

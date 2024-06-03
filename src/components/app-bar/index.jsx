@@ -7,7 +7,7 @@ export const AppBar = ({ accessories }) => {
     <header className="app-bar">
       <div>
         <Link href={PagePath.TEMPLATES} className="branding-name-link">
-          Flodesk
+          Home
         </Link>
       </div>
       <div>{accessories}</div>

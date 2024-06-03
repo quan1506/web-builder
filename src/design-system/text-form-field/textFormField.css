@@ -6,3 +6,11 @@
   color: var(--colors-neutral-900);
   transition: border-color 0.2s ease;
 }
+
+.text-form-field-input:hover {
+  border-color: var(--colors-neutral-600);
+}
+
+.text-form-field-input:focus-visible {
+  outline: 1px auto rgb(11, 11, 11);
+}

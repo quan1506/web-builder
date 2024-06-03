@@ -1,17 +1,8 @@
-import classNames from "classnames";
 import "./button.css";
 
-const Button = ({ children, state, className, ...props }) => {
+const Button = ({ children, state, ...props }) => {
   return (
-    <button
-      {...props}
-      className={classNames(
-        "FDButton",
-        "primary",
-        state === "loading" && "loading",
-        className
-      )}
-    >
+    <button {...props} className="FDButton primary">
       {children}
     </button>
   );

@@ -1,8 +1,7 @@
 import { useLocation } from "wouter";
 import { AppBar, TemplateCard } from "../../components";
 import { usePageBuilderStore } from "../../hooks";
-import { PagePath } from "../../config";
-import { TEMPLATES } from "../../templates";
+import { PagePath, TEMPLATES } from "../../config";
 import "./TemplatesSelectionPage.css";
 
 const TemplateSelectionPage = () => {
@@ -18,7 +17,7 @@ const TemplateSelectionPage = () => {
     <div>
       <AppBar />
       <main className="template-selection-page-container">
-        <h1 className="template-list-title">Choose a template to start</h1>
+        <h1 className="template-list-title">Select a template to start with</h1>
         <div className="template-list-container">
           {TEMPLATES.map((template) => (
             <TemplateCard

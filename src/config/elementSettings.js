@@ -4,12 +4,12 @@ export const FONT_WEIGHT_OPTIONS = [
 ];
 
 export const HEADING_TAG_OPTIONS = [
-  { value: "h1", label: "H1" },
-  { value: "h2", label: "H2" },
-  { value: "h3", label: "H3" },
-  { value: "h4", label: "H4" },
-  { value: "h5", label: "H5" },
-  { value: "h6", label: "H6" },
+  { value: "h1", label: "H1", fontSize: 40 },
+  { value: "h2", label: "H2", fontSize: 32 },
+  { value: "h3", label: "H3", fontSize: 24 },
+  { value: "h4", label: "H4", fontSize: 20 },
+  { value: "h5", label: "H5", fontSize: 16 },
+  { value: "h6", label: "H6", fontSize: 14 },
 ];
 
 export const LINK_TARGET_OPTIONS = [
