@@ -1,6 +1,6 @@
 # Web builder
 
-An application allowing to build and export a static web page from a template with customizable settings.
+Learning project to develop an application allowing to build and export a static web page from a template with customizable settings.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
